@@ -2,7 +2,7 @@
 
 An interactive web dashboard built with **Streamlit** to explore and visualize supermarket sales data through dynamic filters and KPIs.
 
-🚀 **[Live App](https://craftedbygaby-supermarket.streamlit.app/)**
+**[Live App](https://craftedbygaby-supermarket.streamlit.app/)**
 
 ---
 
