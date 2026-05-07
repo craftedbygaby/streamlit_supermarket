@@ -143,7 +143,7 @@ st.header('Sales Over Time')
 sales_over_time = filtered_df.groupby(filtered_df['Date'].dt.date)['Total'].sum()
 fig, ax = plt.subplots(figsize=(10,5))
 
-ax.plot(sales_over_time)
+ax.plot(sales_over_time, color='seagreen')
 ax.set_title('Sales over time')
 ax.set_xlabel('Date')
 ax.set_ylabel('Total Sales')
@@ -154,9 +154,20 @@ st.divider()
 # ---------------------------------------------------
 # SALES BY PRODUCT LINE
 # ---------------------------------------------------
+st.header('Sales by Product Line')
 
+sales_by_product = filtered_df.groupby('Product line')['Total'].sum().sort_values(ascending=False)
 
+fig, ax = plt.subplots(figsize=(10, 6))
+sales_by_product.plot(kind='bar', ax=ax, color='mediumpurple')
+ax.set_title('Sales by Product Line')
+ax.set_xlabel('Product Line')
+ax.set_ylabel('Total Sales')
+ax.tick_params(axis='x', rotation=45)
 
+st.pyplot(fig)
+
+st.divider()
 # ---------------------------------------------------
 # TOP 5 TRANSACTIONS
 # ---------------------------------------------------
@@ -171,7 +182,7 @@ st.divider()
 # ---------------------------------------------------
 st.markdown('''
 <h2 style='color:#4CAF50;'>
-Dashboard Loaded successfully!
+Dashboard Loaded Successfully!
 </h2>
 ''', unsafe_allow_html=True)
 
