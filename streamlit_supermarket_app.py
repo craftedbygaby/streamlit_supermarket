@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # PAGE TITLE
 # ---------------------------------------------------
 st.title('Supermarket Sales Dashboard')
-st.write('''This Dashboard allows us to explore supermarket sales data using interactive strelit widgets''')
+st.write('''This Dashboard allows us to explore supermarket sales data using interactive streamlit widgets''')
 
 st.divider()
 
